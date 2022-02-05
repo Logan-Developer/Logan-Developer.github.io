@@ -1,0 +1,44 @@
+:root {
+    --bg-color: antiquewhite;
+    --primary-text-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background: white;
+    align-content: center;
+}
+
+img {
+    max-width: 20%;
+}
+
+li {
+   list-style: none;
+   padding: 1em;
+}
+
+section {
+    margin: auto;
+    width: 80%;
+}
+
+.card {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 2%;
+    box-shadow: 10px 10px 8px 10px #888888;
+}
+
+.card-header {
+    text-align: center;
+}
