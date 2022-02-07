@@ -1,6 +1,6 @@
 const target = document.querySelectorAll('.parallax');
 
-if (window.screen.width >= 1000) {
+if (window.screen.width >= 1400) {
     window.addEventListener('scroll', () => {
 
         for (let index = 0; index < target.length; index++) {

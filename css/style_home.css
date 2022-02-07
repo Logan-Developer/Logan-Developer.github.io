@@ -1,56 +1,43 @@
-/* Top */
-
+/*==================================================================
+    TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP TOP
+==================================================================*/
+/*//////////////////////////////////////////////////////////////////
+[ General elements ]*/
 header {
     position: relative;
     height: 100vh;
 }
-
 header::before {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    background: url("../img/background_home.jpg") no-repeat center center fixed;
+    background: url("../img/background_home.jpg")  center center fixed;
     background-size: cover;
 }
-
 .home-banner {
     position: relative;
-    z-index: 2;
-    width: 50%;
     padding-top: 10vh;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--primary-text-color);
     text-align: center;
 }
-
 .home-banner h1:nth-child(1) {
     margin-bottom: 100px;
 }
-
-.home-banner h1 {
-    font-size: 8em;
-}
-
 .home-banner p {
-    font-size: 2em;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
-
+/*//////////////////////////////////////////////////////////////////
+[ Scroll button ]*/
 .scroll-button a {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 48%;
     z-index: 0;
     display: inline-block;
     transform: translate(0, -50%);
-    color: var(--primary-text-color);
-    text-decoration: none;
     transition: opacity .3s;
     padding-top: 60px;
 }
-
 .scroll-button span:before {
     position: absolute;
     top: 10px;
@@ -59,12 +46,11 @@ header::before {
     width: 6px;
     height: 6px;
     margin-left: -3px;
-    background-color: #fff;
+    background-color: var(--color-scroll-button);
     border-radius: 100%;
-    animation: sdb10 2s infinite;
+    animation: animation-scroll 2s infinite;
     box-sizing: border-box;
 }
-
 .scroll-button span {
     position: absolute;
     top: 0;
@@ -72,12 +58,159 @@ header::before {
     width: 30px;
     height: 50px;
     margin-left: -15px;
-    border: 2px solid #fff;
+    border: 2px solid var(--color-scroll-button);
     border-radius: 50px;
     box-sizing: border-box;
 }
+/*//////////////////////////////////////////////////////////////////
+[ Typing text effect ]*/
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#feature-text {
+    margin-left: 8px;
+  }
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: var(--typing-text-cursor-color);
+    margin-left: 8px;
+    animation: typing-text-cursor-blink .6s linear infinite alternate;
+}
+/*==================================================================
+    PRESENTATION PRESENTATION PRESENTATION PRESENTATION PRESENTATION
+==================================================================*/
+/*//////////////////////////////////////////////////////////////////
+[ General elements ]*/
+#presentation-info {
+    grid-area: presentation-info;
+    text-align: center;
+}
+#presentation-info span {
+    font-weight: bold;
+}
+#presentation-resume {
+    grid-area: presentation-resume;
+}
+#presentation-cv {
+    grid-area: presentation-cv;
+}
+#presentation-cv a {
+    padding: 5px;
+    border: 2px solid var(--bg-color-button);
+    background-color: var(--bg-color-button);
+    border-radius: 10px;
+}
+#presentation-skills {
+    grid-area: presentation-skills;
+}
+#presentation-languages {
+    grid-area: presentation-languages;
+}
+#presentation-languages img {
+    max-width: 20%;
+    vertical-align: middle;
+}
+#presentation-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.4fr 0.2fr 0.6fr;
+    grid-template-areas: "presentation-info presentation-info"
+                         "presentation-skills presentation-resume"
+                         "presentation-skills presentation-cv"
+                         "presentation-skills presentation-languages";
+    grid-column-gap: 100px;
+}
+/*//////////////////////////////////////////////////////////////////
+[ Skillbar ]*/
+.skillbar {
+    position:relative;
+    display: inline-block;
+    margin:15px 0;
+    width:100%;
+    background: var(--bg-color-skillbar);
+    height:35px;
+    border-radius:20px;
+}
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:60px;
+    font-weight:bold;
+    font-size: 13px;
+    background-color: var(--bg-color-skillbar);
+    border-radius: 20px;
+    padding:0 20px;
+    line-height:35px;
+}
+.skillbar-bar {
+    height:35px;
+    width:0;
+    border-radius: 20px;
+    background: var(--color-skillbar);
+    display: inline-block;
+}
+.skillbar-progress {
+    position:absolute;
+    top:0;
+    right:0;
+    font-weight:bold;
+    font-size:13px;
+    line-height:35px;
+    padding-right: 20px;
+}
+/*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
+.contact-grid {
+    display: grid;
+    row-gap: 10px;
+    grid-template-areas: "contact-phone-icon contact-email-icon"
+                         "contact-phone-text contact-email-text"
+                         "contact-github-icon contact-linkedin-icon"
+                         "contact-github-text contact-linkedin-text";
+}
+.contact-grid img {
+    width: 50%;
+}
+.contact-phone-icon {
+    grid-area: contact-phone-icon;
+}
+.contact-email-icon {
+    grid-area: contact-email-icon;
+}
+.contact-phone-text {
+    grid-area: contact-phone-text;
+}
+.contact-email-text {
+    grid-area: contact-email-text;
+}
+.contact-github-icon {
+    grid-area: contact-github-icon;
+}
+.contact-linkedin-icon {
+    grid-area: contact-linkedin-icon;
+}
+.contact-github-text {
+    grid-area: contact-github-text;
+}
+.contact-linkedin-text {
+    grid-area: contact-linkedin-text;
+}
+/*==================================================================
+    PRO-EXP FORMATION PRO-EXP FORMATION PRO-EXP FORMATION
+==================================================================*/
+#professional-experiences, #formation {
+    text-align: center;
+}
 
-@keyframes sdb10 {
+/*==================================================================
+    ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION
+==================================================================*/
+@keyframes animation-scroll {
     0% {
         transform: translate(0, 0);
         opacity: 0;
@@ -93,56 +226,19 @@ header::before {
         opacity: 0;
     }
 }
-
-.typing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#feature-text {
-    margin-left: 8px;
-  }
-
-.input-cursor {
-    display: inline-block;
-    width: 2px;
-    height: 42px;
-    background-color: white;
-    margin-left: 8px;
-    animation: blink .6s linear infinite alternate;
-}
-
-@keyframes blink {
+@keyframes typing-text-cursor-blink {
     0% {opacity: 1;}
     40% {opacity: 1;}
     60% {opacity: 0;}
     100% {opacity: 0;}
-  }
-
-/* Nav */
-nav {
-    height: 10vh;
-    background-color: black;
-    color: var(--primary-text-color);
 }
-
-nav a {
-    text-decoration: none;
-    color: var(--primary-text-color);
-}
-
-#presentation-body {
-    display: grid;
-}
-
-/* Presentation */
-@media (max-width: 1000px) {
-
+/*==================================================================
+    RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE
+==================================================================*/
+@media (max-width: 1400px) {
     #presentation-body {
-
         grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.8fr 0.2fr 1fr 0.4fr;
+        grid-template-rows: 0.4fr 0.4fr 0.2fr 0.8fr 0.4fr;
         grid-template-areas: "presentation-info"
                              "presentation-resume"
                              "presentation-cv"
@@ -150,110 +246,22 @@ nav a {
                              "presentation-languages";
     }
 }
-
-@media (min-width: 1000px) {
-
-    #presentation-body {
-
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 0.4fr 0.4fr 0.3fr 1fr;
-        grid-template-areas: "presentation-info presentation-resume"
-                             "presentation-skills presentation-resume"
-                             "presentation-skills presentation-cv"
-                             "presentation-skills presentation-languages";
-        grid-column-gap: 80px;
+@media (max-width: 600px) {
+    .contact-grid {
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-areas: "contact-phone-icon contact-phone-text"
+                             "contact-email-icon contact-email-text"
+                             "contact-github-icon contact-github-text"
+                             "contact-linkedin-icon contact-linkedin-text";            
     }
-}
-
-#presentation-info {
-
-    grid-area: presentation-info;
-}
-
-#presentation-info span {
-    font-weight: bold;
-}
-
-#presentation-resume {
-
-    grid-area: presentation-resume;
-}
-
-#presentation-cv {
-
-    grid-area: presentation-cv;
-}
-
-#presentation-cv a {
-
-    padding: 5px;
-    color: black;
-    text-decoration: none;
-    border: 2px solid antiquewhite;
-    background-color: antiquewhite;
-    border-radius: 10px;
-}
-
-#presentation-skills {
-
-    grid-area: presentation-skills;
-}
-
-#presentation-languages {
-    grid-area: presentation-languages;
-}
-
-.skillbar {
-    position:relative;
-    display: inline-block;
-    margin:15px 0;
-    width:100%;
-    background: #797979;
-    height:35px;
-    border-radius:20px;
-}
-
-.skillbar-title {
-    position:absolute;
-    top:0;
-    left:0;
-    width:120px;
-    font-weight:bold;
-    font-size:13px;
-    color:white;
-    background-color: #797979;
-    border-radius: 20px;
-    padding:0 20px;
-    height:35px;
-    line-height:35px;
-}
-
-.skillbar-bar {
-    height:35px;
-    width:0;
-    border-radius: 20px;
-    background: antiquewhite;
-    display: inline-block;
-}
-
-.skillbar-progress {
-    position:absolute;
-    top:0;
-    right:0;
-    font-weight:bold;
-    font-size:13px;
-    color: white;
-    height:35px;
-    line-height:35px;
-    padding-right: 20px;
-}
-
-.skill-bar-percent {
-    position:absolute;
-    right:10px;
-    top:0;
-    font-size:11px;
-    height:35px;
-    line-height:35px;
-    color: black;
+    .contact-text {
+        position: relative;
+    }
+    .contact-text p {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 }

@@ -8,7 +8,12 @@ const carouselText = [
   ]
   
   $( document ).ready(async function() {
+    if (window.screen.width >= 1400) {
       carousel(carouselText, "#feature-text")
+    }
+    else {
+      typeSentence(carouselText[0], "#feature-text", 0);
+    }
   });
   
   async function typeSentence(sentence, eleRef, delay = 100) {
