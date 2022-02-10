@@ -206,7 +206,39 @@ header::before {
 #professional-experiences, #formation {
     text-align: center;
 }
-
+/*==================================================================
+    INTERESTS INTERESTS INTERESTS INTERESTS INTERESTS INTERESTS
+==================================================================*/
+#interests {
+    text-align: center;
+}
+.interests-grid {
+    display: grid;
+    row-gap: 10px;
+    grid-template-areas: "interests-travel-icon interests-programming-icon interests-cinema-icon"
+                         "interests-travel-text interests-programming-text interests-cinema-text";
+}
+.interests-grid img {
+    width: 50%;
+}
+.interests-travel-icon {
+    grid-area: interests-travel-icon;
+}
+.interests-programming-icon {
+    grid-area: interests-programming-icon;
+}
+.interests-cinema-icon {
+    grid-area: interests-cinema-icon;
+}
+.interests-travel-text {
+    grid-area: interests-travel-text;
+}
+.interests-programming-text {
+    grid-area: interests-programming-text;
+}
+.interests-cinema-text {
+    grid-area: interests-cinema-text;
+}
 /*==================================================================
     ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION
 ==================================================================*/
@@ -248,20 +280,24 @@ header::before {
 }
 @media (max-width: 600px) {
     .contact-grid {
-        display: grid;
-        row-gap: 10px;
         grid-template-columns: 0.5fr 1fr;
         grid-template-areas: "contact-phone-icon contact-phone-text"
                              "contact-email-icon contact-email-text"
                              "contact-github-icon contact-github-text"
                              "contact-linkedin-icon contact-linkedin-text";            
     }
-    .contact-text {
+    .grid-icon-text {
         position: relative;
     }
-    .contact-text p {
+    .grid-icon-text p {
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
+    }
+    .interests-grid {
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-areas: "interests-travel-icon interests-travel-text"
+                             "interests-programming-icon interests-programming-text"
+                             "interests-cinema-icon interests-cinema-text";
     }
 }
