@@ -201,6 +201,12 @@ header::before {
     grid-area: contact-linkedin-text;
 }
 /*==================================================================
+    FORMATION FORMATION FORMATION FORMATION FORMATION FORMATION
+==================================================================*/
+#formation li span {
+    font-style: italic;
+}
+/*==================================================================
     PRO-EXP FORMATION PRO-EXP FORMATION PRO-EXP FORMATION
 ==================================================================*/
 #professional-experiences, #formation {

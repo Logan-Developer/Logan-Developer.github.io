@@ -49,6 +49,10 @@ a {
   color: var(--primary-text-color);
   text-decoration: none;
 }
+p a {
+  text-decoration: underline;
+  font-weight: bold;
+}
 li {
   list-style: none;
   padding: 1em;
