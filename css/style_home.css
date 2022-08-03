@@ -69,9 +69,6 @@ header::before {
     justify-content: center;
     align-items: center;
 }
-#feature-text {
-    margin-left: 8px;
-  }
 .input-cursor {
     display: inline-block;
     width: 2px;

@@ -5,13 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "request": "attach",
-            "type": "pwa-chrome",
-            "webRoot": "${workspaceFolder}"
+            "name": "Chrome Beta",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "file": "${workspaceFolder}/index.html",
+            "runtimeExecutable": "/usr/bin/google-chrome-beta"
         }
-        
-
     ]
 }

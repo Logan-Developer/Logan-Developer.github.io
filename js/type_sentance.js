@@ -1,18 +1,37 @@
-const carouselText = [
-    "am a student in I.T",
-    "want to become a software engineer",
-    "enjoy making websites",
-    "enjoy making apps",
-    "enjoy making Android custom OS",
-    "am dreaming of living in the United States"
+const carouselTextEn = [
+    " am a student in I.T",
+    " want to become a software engineer",
+    " enjoy making websites",
+    " enjoy making apps",
+    " enjoy making Android custom OS",
+    " am dreaming of living in the United States"
   ]
+
+  const carouselTextFr = [
+    "e suis étudiant en informatique",
+    "e veux devenir ingénieur logiciel",
+    "'aime créer des sites web",
+    "'aime créer des applications",
+    "'aime créer des OS Android personnalisés",
+    "e rêve de vivre aux Etats-Unis"
+  ]
+
+  const carouselText = () => {
+    const lang = window.localStorage.getItem('i18nextLng');
+
+    if (lang === 'fr') {
+      return carouselTextFr
+    } else {
+      return carouselTextEn
+    }
+  }
   
   $( document ).ready(async function() {
     if (window.screen.width >= 1400) {
-      carousel(carouselText, "#feature-text")
+      carousel(carouselText(), "#feature-text")
     }
     else {
-      typeSentence(carouselText[0], "#feature-text", 0);
+      typeSentence(carouselText()[0], "#feature-text", 0);
     }
   });
   
